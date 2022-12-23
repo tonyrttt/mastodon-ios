@@ -33,7 +33,8 @@ jobs:
         run: |
             xcodebuild archive \
               -workspace Mastodon.xcworkspace \
-              -scheme Mastodon-Veracode \
+              -scheme Mastodon \
+              -configuration Debug \
               -destination generic/platform=iOS \
               -archivePath Mastodon.xcarchive \
               CODE_SIGN_IDENTITY="" \
