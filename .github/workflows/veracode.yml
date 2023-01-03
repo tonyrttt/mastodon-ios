@@ -28,7 +28,7 @@ jobs:
       - name: Export a Build Log with xcodebuild - clean
         run: xcodebuild clean
 
-# TODO - get code signing to work
+      # Note that code signing is disabled, for analysis purposes we don't need a signed build.
       - name: Export a Build Log with xcodebuild - archive
         run: |
             xcodebuild archive \
