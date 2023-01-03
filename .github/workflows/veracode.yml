@@ -1,4 +1,6 @@
 name: Veracode Static Analysis Demo
+# TODO - currently only runs manually, when you run this depends on on your workflow
+#.       see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows for possibilities
 on: workflow_dispatch
     
 jobs:
