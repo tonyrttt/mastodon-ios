@@ -26,7 +26,7 @@ jobs:
             
       - name: Install gen-ir from source
         run: |
-            git clone -b parse_projects git@github.com:veracode/gen-ir.git
+            git clone -b parse_projects https://github.com/veracode/gen-ir.git
             cd gen-ir
             # Debug output: ./.build/debug/gen-ir
             swift build
