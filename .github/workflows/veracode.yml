@@ -23,9 +23,18 @@ jobs:
             bundle install
             bundle exec arkana
             bundle exec pod install
+            
+      - name: Install gen-ir from source
+        run: |
+            git clone -b parse_projects git@github.com:veracode/gen-ir.git
+            cd gen-ir
+            # Debug output: ./.build/debug/gen-ir
+            swift build
+            echo $PATH | tr ":" "\n"
+            sudo cp ./bin/debug/gen-ir /usr/bin/gen-ir
       
-      - name: Install Homebrew dependencies
-        run: brew tap veracode/tap && brew install gen-ir
+#       - name: Install Homebrew dependencies
+#         run: brew tap veracode/tap && brew install gen-ir
         
       - name: Export a Build Log with xcodebuild - clean
         run: xcodebuild clean
