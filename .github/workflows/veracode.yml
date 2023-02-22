@@ -30,7 +30,7 @@ jobs:
             cd gen-ir
             swift build
             echo $PATH.| tr ":" "\n"
-            sudo cp ./.build/debug/gen-ir /usr/bin/gen-ir
+            sudo cp ./.build/debug/gen-ir /usr/local/bin/gen-ir
       
 #       - name: Install Homebrew dependencies
 #         run: brew tap veracode/tap && brew install gen-ir
