@@ -28,10 +28,8 @@ jobs:
         run: |
             git clone -b parse_projects https://github.com/veracode/gen-ir.git
             cd gen-ir
-            # Debug output: ./.build/debug/gen-ir
             swift build
-            echo $PATH | tr ":" "\n"
-            sudo cp ./bin/debug/gen-ir /usr/bin/gen-ir
+            sudo cp ./build/debug/gen-ir /usr/bin/gen-ir
       
 #       - name: Install Homebrew dependencies
 #         run: brew tap veracode/tap && brew install gen-ir
