@@ -56,6 +56,9 @@ jobs:
       - name: Generate IR with a Build Log
         run:  gen-ir build.log Mastodon.xcarchive/IR
         
+      - name: Show tree
+        run: tree
+        
       - name: Build Veracode dir
         run: |
           mkdir veracode
