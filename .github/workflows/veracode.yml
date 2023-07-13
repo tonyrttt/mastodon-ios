@@ -59,6 +59,12 @@ jobs:
           mkdir veracode
           zip veracode/Matodon-Podfile.zip Podfile.lock
           zip -r veracode/Mastodon.xcarchive.zip Mastodon.xcarchive
+          
+      - name: Build Artifact
+        uses: actions/upload-artifact@v3.1.2
+        with: 
+          name: assets-for-download
+          path: veracode
       
       # Can't use Veracode GitHub Action because container actions not supported on MacOS runners
       - name: Upload & Scan
