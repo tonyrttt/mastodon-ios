@@ -69,8 +69,8 @@ jobs:
             -debug \
             -deleteincompletescan 2 \
             -action uploadandscan \
-            -vid ${{ secrets.API_ID }} \
-            -vkey ${{ secrets.API_KEY }} \
+            -vid 7f0cdad33f521016a9288c35eb4d575d \
+            -vkey 0351abe6bf4df7224054f4bdb5a46ed6f90c7783b496e486671af6de6639f9e7ba9e033730af7144f3ec9435cd6303db77810bca6f11f75dd349c084706f98e8 \
             -appname "relaxnow/mastodon-ios" \
             -createprofile true \
             -criticality VeryHigh \
