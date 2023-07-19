@@ -42,7 +42,7 @@ jobs:
               CODE_SIGN_IDENTITY="" \
               CODE_SIGNING_REQUIRED=NO \
               CODE_SIGNING_ALLOWED=NO \
-              DEBUG_INFOMATION_FORMAT=dwarf-with-dsym \
+              DEBUG_INFOMATION_FORMAT=dwarf \
               ENABLE_BITCODE=YES > build.log
 
       - name: Generate IR with a Build Log
