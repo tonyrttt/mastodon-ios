@@ -14,9 +14,6 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Setup
-        env: 
-          NotificationEndpointDebug: ${{ secrets.NotificationEndpointDebug }}
-          NotificationEndpointRelease: ${{ secrets.NotificationEndpointRelease }}
         run: |
             cd /Users/runner/work/mastodon-ios/mastodon-ios/
             gem install bundler:2.3.11
@@ -43,7 +40,7 @@ jobs:
               CODE_SIGNING_REQUIRED=NO \
               CODE_SIGNING_ALLOWED=NO \
               DEBUG_INFOMATION_FORMAT=dwarf-with-dsym \
-              ENABLE_BITCODE=NO > build.log
+              ENABLE_BITCODE=YES > build.log
 
       - name: Generate IR with a Build Log
         run:  gen-ir build.log Mastodon.xcarchive/IR
